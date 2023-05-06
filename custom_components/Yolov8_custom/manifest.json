@@ -1,5 +1,5 @@
 {
-    "domain": "custom_components",
+    "domain": "Yolov8_custom",
     "name": "Yolov8 Home Assistant",
     "documentation": "https://github.com/Bluelabel69/Yolov8H.A/blob/main/README.md",
     "dependencies": [],
