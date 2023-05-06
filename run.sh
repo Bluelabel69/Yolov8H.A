@@ -1,2 +1,2 @@
 #!/usr/bin/with-contenv bash
-python3 /yolo_processor.py
+python3 /__init__.py

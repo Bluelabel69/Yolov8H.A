@@ -1,4 +1,4 @@
-import asyncio
+"""import asyncio
 import cv2
 import io
 import logging
@@ -31,3 +31,30 @@ class YoloCamera(Camera):
         results = self._yolo_model.predict(img)
         _, img_buffer = cv2.imencode(".jpg", results.render())
         return img_buffer.tobytes()
+"""
+
+
+from homeassistant.components.camera import Camera
+from homeassistant.const import CONF_NAME
+from . import DOMAIN
+
+async def async_setup_entry(hass, entry, async_add_entities):
+    camera_entity_id = entry.data["camera_entity_id"]
+    yolov8_camera = YOLOv8Camera(hass, camera_entity_id)
+    async_add_entities([yolov8_camera])
+
+class YOLOv8Camera(Camera):
+    def __init__(self, hass, camera_entity_id):
+        super().__init__()
+        self._hass = hass
+        self._camera_entity_id = camera_entity_id
+        self._name = f"{DOMAIN.capitalize()} {CONF_NAME}"
+
+    async def async_camera_image(self):
+        processed_image_path = self._hass.data[DOMAIN]["processed_image_path"]
+        with open(processed_image_path, "rb") as file:
+            return file.read()
+
+    @property
+    def name(self):
+        return self._name

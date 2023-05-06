@@ -1,3 +1,4 @@
+import voluptuous as vol
 from homeassistant import config_entries
 
 DOMAIN = "Yolov8_custom"

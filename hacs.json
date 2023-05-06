@@ -1,0 +1,6 @@
+{
+  "name": "Yolov8 Home Assistant",
+  "domains": ["Yolov8_custom"],
+  "documentation": "https://github.com/Bluelabel69/Yolov8H.A/blob/main/README.md",
+  "codeowners": ["@Bluelabel69"]
+}

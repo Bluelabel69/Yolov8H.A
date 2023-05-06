@@ -1,12 +1,11 @@
 {
-    "domain": "Yolov8_custom",
-    "name": "Yolov8 Home Assistant",
-    "documentation": "https://github.com/Bluelabel69/Yolov8H.A/blob/main/README.md",
-    "dependencies": [],
-    "codeowners": ["@Bluelabel69"],
-    "requirements": [],
-    "extra_quality_scale": "https://www.home-assistant.io/integrations/quality_scale/",
-    "iot_class": "https://www.home-assistant.io/integrations/iot_class/",
-    "version": "0.1.0"
-  }
-  
+  "domain": "Yolov8_custom",
+  "name": "Yolov8 Home Assistant",
+  "documentation": "https://github.com/Bluelabel69/Yolov8H.A/blob/main/README.md",
+  "dependencies": [],
+  "codeowners": ["@Bluelabel69"],
+  "requirements": ["ultralytics"],
+  "extra_quality_scale": "https://www.home-assistant.io/integrations/quality_scale/",
+  "iot_class": "https://www.home-assistant.io/integrations/iot_class/",
+  "version": "0.1.0"
+}
