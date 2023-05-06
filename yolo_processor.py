@@ -24,7 +24,7 @@ async def process_camera_image(hass, camera_entity_id, model):
 
 async def main():
     # Configurar o modelo YOLO
-    model = YOLO("D:\\Python\\Programa Principal\\runs\\detect\\train32\\weights\\best.pt")
+    model = YOLO("\config\\custom_components\\custom_components\\Modelos\\best.pt")
 
     # Carregar as opções do add-on
     with open("/data/options.json") as f:
